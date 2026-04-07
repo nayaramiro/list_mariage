@@ -1,46 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de Presentes – Bruna & Guilherme</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Cormorant Garamond', serif; background-color: #fdf8f6; }
+    .playfair { font-family: 'Playfair Display', serif; }
+    .script { font-family: 'Playfair Display', serif; font-style: italic; }
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #9b1c1c55, transparent);
+    }
+    .item-card {
+      border-bottom: 1px solid #f3e0da;
+      transition: background 0.2s;
+    }
+    .item-card:hover { background-color: #fff5f3; }
+    .btn-link {
+      border: 1px solid #9b1c1c;
+      color: #9b1c1c;
+      transition: all 0.2s;
+    }
+    .btn-link:hover { background-color: #9b1c1c; color: white; }
+    .section-badge {
+      background-color: #9b1c1c;
+      color: white;
+      letter-spacing: 0.15em;
+    }
+    /* Decorative corner SVG */
+    .corner-flower {
+      position: absolute;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen py-10 px-4">
 
-<style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: var(--font-sans); }
-.page { padding: 1.5rem 1rem; max-width: 600px; margin: 0 auto; }
-.header { text-align: center; margin-bottom: 2rem; }
-.header h1 { font-size: 22px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
-.header p { font-size: 14px; color: var(--color-text-secondary); }
-.section { margin-bottom: 2rem; }
-.section-title { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); padding-bottom: 8px; margin-bottom: 12px; }
-.item { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); margin-bottom: 8px; }
-.item-name { font-size: 15px; color: var(--color-text-primary); }
-.item-link { font-size: 13px; padding: 5px 12px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); color: var(--color-text-secondary); text-decoration: none; background: var(--color-background-secondary); white-space: nowrap; }
-.item-link:hover { background: var(--color-background-tertiary); }
-</style>
-<div class="page">
-  <div class="header">
-    <h1>Lista de presentes</h1>
-    <p>Clique no item para ver e comprar</p>
+  <!-- Header -->
+  <div class="max-w-lg mx-auto text-center mb-10 relative">
+    <!-- Top decoration -->
+    <div class="flex justify-center mb-2">
+      <svg width="120" height="30" viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 15 Q30 5 60 15 Q90 25 110 15" stroke="#9b1c1c" stroke-width="1" fill="none" opacity="0.5"/>
+        <circle cx="60" cy="15" r="3" fill="#9b1c1c" opacity="0.7"/>
+        <circle cx="40" cy="12" r="2" fill="#9b1c1c" opacity="0.4"/>
+        <circle cx="80" cy="18" r="2" fill="#9b1c1c" opacity="0.4"/>
+        <path d="M55 8 Q60 3 65 8 Q60 13 55 8Z" fill="#9b1c1c" opacity="0.5"/>
+      </svg>
+    </div>
+
+    <p class="text-xs tracking-widest uppercase text-red-900 opacity-70 mb-1">Chá dos Noivos</p>
+    <h1 class="script text-5xl text-red-900 mb-1">Bruna & Guilherme</h1>
+    <div class="divider my-3"></div>
+    <p class="text-sm text-red-900 opacity-60 italic tracking-wide">Deus começou essa história...<br/>e queremos celebrar cada detalhe com você!</p>
+    <div class="divider mt-3"></div>
+
+    <!-- Date & location -->
+    <div class="flex justify-center gap-6 mt-4 text-xs text-red-900 opacity-70 tracking-widest uppercase">
+      <span>Sábado · 18.04.2026 · 17h00</span>
+    </div>
+    <p class="text-xs text-red-900 opacity-50 mt-1 italic">Rue Beaugrand 39, 7100 Écaussines</p>
   </div>
 
-  <div class="section">
-    <div class="section-title">Cozinha</div>
-    <div class="item"><span class="item-name">Jogo de panela</span><a class="item-link" href="https://www.joybuy.nl/dp/tefal-ingenio-so-light-ensemble-de/10439344" target="_blank">Ver produto</a></div>
-    <div class="item"><span class="item-name">Jogo de faca</span><a class="item-link" href="https://www.joybuy.nl/dp/5five-ensemble-de-couteaux-en-acier/10095583" target="_blank">Ver produto</a></div>
-    <div class="item"><span class="item-name">Jogo de talheres</span><a class="item-link" href="https://www.joybuy.nl/dp/secret-de-gourmet-ensemble-de-couverts/10096746" target="_blank">Ver produto</a></div>
-    <div class="item"><span class="item-name">Jogo de pratos</span><a class="item-link" href="https://www.joybuy.nl/dp/alpina-ensemble-de-vaisselle-40-pi%C3%A8ces/10299016" target="_blank">Ver produto</a></div>
-    <div class="item"><span class="item-name">Tábua</span><a class="item-link" href="https://www.joybuy.nl/dp/planches-%C3%A0-d%C3%A9couper-en-bambou-carbonis%C3%A9/10509388" target="_blank">Ver produto</a></div>
-    <div class="item"><span class="item-name">Colheres de cozinhar</span><a class="item-link" href="https://www.amazon.com.be/Omtofo-Antiadh%C3%A9sive-Anti-Rayures-Accessoires-lave-vaisselle/dp/B0D1FQ77FT/" target="_blank">Ver produto</a></div>
-    <div class="item"><span class="item-name">Vasilhas</span><a class="item-link" href="https://www.joybuy.nl/dp/alpina-ensemble-de-contenants-alimentaires-en/10296019" target="_blank">Ver produto</a></div>
-    <div class="item"><span class="item-name">Fruteira</span><a class="item-link" href="https://www.joybuy.nl/dp/huacan/10055405" target="_blank">Ver produto</a></div>
-  </div>
+  <!-- Lista -->
+  <div class="max-w-lg mx-auto">
 
-  <div class="section">
-    <div class="section-title">Quarto</div>
-    <div class="item"><span class="item-name">Lençol</span><a class="item-link" href="https://www.joybuy.nl/dp/ochama-drap-housse-en-coton-pur/10056641" target="_blank">Ver produto</a></div>
-    <div class="item"><span class="item-name">Edredom</span><a class="item-link" href="https://www.action.com/fr-be/p/2548182/couette-4-saisons-comfibeds/" target="_blank">Ver produto</a></div>
-    <div class="item"><span class="item-name">Jogo de toalhas</span><a class="item-link" href="https://www.amazon.fr/Cloud-Pillow-Serviette-Bain-100x150/dp/B0FKN1M18G/" target="_blank">Ver produto</a></div>
-    <div class="item"><span class="item-name">Toalhas de rosto</span><a class="item-link" href="https://www.joybuy.nl/dp/vidaxl-solund-serviettes-invit%C3%A9es-50-pcs/10214639" target="_blank">Ver produto</a></div>
-  </div>
+    <!-- COZINHA -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="section-badge text-xs px-4 py-1 rounded-full playfair tracking-widest">Cozinha</div>
+        <div class="flex-1 divider"></div>
+      </div>
 
-  <div class="section">
-    <div class="section-title">Casa</div>
-    <div class="item"><span class="item-name">Aspirador</span><a class="item-link" href="https://www.joybuy.nl/dp/electrolux-eb51c1db-aspirateur-pure-d82-silence/10460085" target="_blank">Ver produto</a></div>
+      <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-red-100">
+        <div class="item-card flex items-center justify-between px-5 py-3">
+          <span class="text-gray-700 text-sm">Jogo de panela</span>
+          <a href="https://www.joybuy.nl/dp/tefal-ingenio-so-light-ensemble-de/10439344" target="_blank" class="btn-link text-xs px-3 py-1 rounded-full">Ver</a>
+        </div>
+        <div class="item-card flex items-center justify-between px-5 py-3">
+          <span class="text-gray-700 text-sm">Jogo de faca</span>
+          <a href="https://www.joybuy.nl/dp/5five-ensemble-de-couteaux-en-acier/10095583" target="_blank" class="btn-link text-xs px-3 py-1 rounded-full">Ver</a>
+        </div>
+        <div class="item-card flex items-center justify-between px-5 py-3">
+          <span class="text-gray-700 text-sm">Jogo de talheres</span>
+          <a href="https://www.joybuy.nl/dp/secret-de-gourmet-ensemble-de-couverts/10096746" target="_blank" class="btn-link text-xs px-3 py-1 rounded-full">Ver</a>
+        </div>
+        <div class="item-card flex items-center justify-between px-5 py-3">
+          <span class="text-gray-700 text-sm">Jogo de pratos</span>
+          <a href="https://www.joybuy.nl/dp/alpina-ensemble-de-vaisselle-40-pi%C3%A8ces/10299016" target="_blank" class="btn-link text-xs px-3 py-1 rounded-full">Ver</a>
+        </div>
+        <div class="item-card flex items-center justify-between px-5 py-3">
+          <span class="text-gray-700 text-sm">Tábua de corte</span>
+          <a href="https://www.joybuy.nl/dp/planches-%C3%A0-d%C3%A9couper-en-bambou-carbonis%C3%A9/10509388" target="_blank" class="btn-link text-xs px-3 py-1 rounded-full">Ver</a>
+        </div>
+        <div class="item-card flex items-center justify-between px-5 py-3">
+          <span class="text-gray-700 text-sm">Colheres de cozinhar</span>
+          <a href="https://www.amazon.com.be/Omtofo-Antiadh%C3%A9sive-Anti-Rayures-Accessoires-lave-vaisselle/dp/B0D1FQ77FT/" target="_blank" class="btn-link text-xs px-3 py-1 rounded-full">Ver</a>
+        </div>
+        <div class="item-card flex items-center justify-between px-5 py-3">
+          <span class="text-gray-700 text-sm">Vasilhas</span>
+          <a href="https://www.joybuy.nl/dp/alpina-ensemble-de-contenants-alimentaires-en/10296019" target="_blank" class="btn-link text-xs px-3 py-1 rounded-full">Ver</a>
+        </div>
+        <div class="item-card flex items-center justify-between px-5 py-3 last:border-b-0">
+          <span class="text-gray-700 text-sm">Fruteira</span>
+          <a href="https://www.joybuy.nl/dp/huacan/10055405" target="_blank" class="btn-link text-xs px-3 py-1 rounded-full">Ver</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUARTO -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="section-badge text-xs px-4 py-1 rounded-full playfair tracking-widest">Quarto</div>
+        <div class="flex-1 divider"></div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-red-100">
+        <div class="item-card flex items-center justify-between px-5 py-3">
+          <span class="text-gray-700 text-sm">Lençol</span>
+          <a href="https://www.joybuy.nl/dp/ochama-drap-housse-en-coton-pur/10056641" target="_blank" class="btn-link text-xs px-3 py-1 rounded-full">Ver</a>
+        </div>
+        <div class="item-card flex items-center justify-between px-5 py-3">
+          <span class="text-gray-700 text-sm">Edredom</span>
+          <a href="https://www.action.com/fr-be/p/2548182/couette-4-saisons-comfibeds/" target="_blank" class="btn-link text-xs px-3 py-1 rounded-full">Ver</a>
+        </div>
+        <div class="item-card flex items-center justify-between px-5 py-3">
+          <span class="text-gray-700 text-sm">Jogo de toalhas</span>
+          <a href="https://www.amazon.fr/Cloud-Pillow-Serviette-Bain-100x150/dp/B0FKN1M18G/" target="_blank" class="btn-link text-xs px-3 py-1 rounded-full">Ver</a>
+        </div>
+        <div class="item-card flex items-center justify-between px-5 py-3 last:border-b-0">
+          <span class="text-gray-700 text-sm">Toalhas de rosto</span>
+          <a href="https://www.joybuy.nl/dp/vidaxl-solund-serviettes-invit%C3%A9es-50-pcs/10214639" target="_blank" class="btn-link text-xs px-3 py-1 rounded-full">Ver</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASA -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="section-badge text-xs px-4 py-1 rounded-full playfair tracking-widest">Casa</div>
+        <div class="flex-1 divider"></div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-red-100">
+        <div class="item-card flex items-center justify-between px-5 py-3 last:border-b-0">
+          <span class="text-gray-700 text-sm">Aspirador</span>
+          <a href="https://www.joybuy.nl/dp/electrolux-eb51c1db-aspirateur-pure-d82-silence/10460085" target="_blank" class="btn-link text-xs px-3 py-1 rounded-full">Ver</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center mt-4 mb-6">
+      <div class="divider mb-4"></div>
+      <p class="script text-2xl text-red-900 opacity-70">Esperamos por você</p>
+      <div class="flex justify-center mt-3">
+        <svg width="80" height="20" viewBox="0 0 80 20" fill="none">
+          <path d="M5 10 Q20 3 40 10 Q60 17 75 10" stroke="#9b1c1c" stroke-width="1" fill="none" opacity="0.4"/>
+          <path d="M35 5 Q40 0 45 5 Q40 10 35 5Z" fill="#9b1c1c" opacity="0.4"/>
+        </svg>
+      </div>
+    </div>
+
   </div>
-</div>
+</body>
+</html>
